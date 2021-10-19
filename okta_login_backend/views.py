@@ -12,6 +12,10 @@ def login_callback(request, *args, **kwargs):
     client_secret = 'your-okta-client-secret-goes-here'
     client_id = 'your-okta-client-id-goes-here'
     domain_url = 'your-okta-domain-url-goes-here'
+
+    # if you're willing to use it with the netlify frontend.. make sure to update the origin
+    # e.g. frontend_redirection_url = "https://okta-login-demo.netlify.app/login/callback"
+
     frontend_redirection_url = "http://localhost:3000/login/callback"
     okta_auth_endpoint = "https://{}/oauth2/default/v1/token".format(domain_url)
 
